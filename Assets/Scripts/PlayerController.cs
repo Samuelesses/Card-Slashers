@@ -87,9 +87,4 @@ public class PlayerController : MonoBehaviour
             rigidBody.AddForce(direction * knockback, ForceMode2D.Impulse);
         }
     }
-
-    public void ActivateAbilityIcon()
-    {
-        abilityIcon.SetActive(true);
-    }
 }

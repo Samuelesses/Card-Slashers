@@ -42,5 +42,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Players
+    uniqueID: 938243975
+    locked: 0
+  - name: Abilities
+    uniqueID: 1331195427
+    locked: 0
   m_RenderingLayers:
   - Default

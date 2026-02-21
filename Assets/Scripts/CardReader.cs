@@ -13,7 +13,7 @@ public class CardReader : MonoBehaviour
             if (c == '\n' || c == '\r')
             {
                 Debug.Log("CARD SCANNED");
-                cardDatabase.Add(cardData, "N/A");
+                if (!cardDatabase.ContainsKey(cardData)) cardDatabase.Add(cardData, "N/A");
                 Debug.Log(cardData);
                 cardData = "";
             }

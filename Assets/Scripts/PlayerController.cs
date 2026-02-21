@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -26,6 +25,7 @@ public class PlayerController : MonoBehaviour
         
         foreach (GameObject player in players)
         {
+            print(player.name);
             if (player.transform == transform) continue;
 
             if ((player.transform.position - transform.position).magnitude <= closestPlayer)

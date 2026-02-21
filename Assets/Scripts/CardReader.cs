@@ -7,6 +7,7 @@ public class CardReader : MonoBehaviour
     public Dictionary<string, CardPlayerData> cardDatabase = new Dictionary<string, CardPlayerData>();
     public int hatListLength;
     public CardPlayerData[] players = new CardPlayerData[4];
+    public GameObject[] realPlayers;
     public int playersIndex = 0;
 
     public class CardPlayerData
@@ -19,10 +20,10 @@ public class CardReader : MonoBehaviour
         public CardPlayerData(string _name, float _color1, float _color2, float _color3, int _hatIndex)
         {
             name = _name;
-            _color1 = _color1;
-            _color2 = _color2;
-            _color3 = _color3;
-            _hatIndex = _hatIndex;
+            color1 = _color1;
+            color2 = _color2;
+            color3 = _color3;
+            hatIndex = _hatIndex;
         }
     }
 
@@ -55,6 +56,7 @@ public class CardReader : MonoBehaviour
             CardPlayerData temp = new CardPlayerData("NAME HERE", Random.Range(0f,1f), Random.Range(0f,1f), Random.Range(0f,1f), Random.Range(0, hatListLength));
             cardDatabase.Add(currentCardData, temp);
             players[playersIndex] = temp;
+            realPlayers[playersIndex].GetComponent<menuPlayerScript>().updatePlayer(temp.name, temp.color1, temp.color2, temp.color3, temp.hatIndex);
             playersIndex++;
             Debug.Log(cardDatabase);
         }

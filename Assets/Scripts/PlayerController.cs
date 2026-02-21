@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public int hatIndex;
     [SerializeField] Animator srAni;
     [SerializeField] GameObject hitParticle;
+    [SerializeField] CameraScript cameraScript;
 
     [Header ("---- Combat Variables ----")]
     public Rigidbody2D rigidBody;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        cameraScript = GameObject.Find("Main Camera").GetComponent<CameraScript>();
         hatIndex = Random.Range(0, hats.Length);
         hats[hatIndex].SetActive(true);
 
@@ -89,6 +91,7 @@ public class PlayerController : MonoBehaviour
             rigidBody.AddForce(direction * knockback, ForceMode2D.Impulse);
             srAni.SetTrigger("hit");
             Instantiate(hitParticle, transform.position, transform.rotation);
+            cameraScript.shake(0.1f, 0.04f);
         }
     }
 }

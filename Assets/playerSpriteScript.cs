@@ -12,6 +12,6 @@ public class playerSpriteScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.eulerAngles = new Vector3(0f, 0f, player.rotation.z*-1);
+        //transform.eulerAngles = new Vector3(0f, 0f, player.rotation.z*-1);
     }
 }

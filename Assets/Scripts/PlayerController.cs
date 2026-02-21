@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public float knockbackDuration;
     public static bool hit;
     public GameObject[] players;
+    public GameObject[] abilityOrb;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
         //hats[hatIndex].SetActive(true);
 
         players = GameObject.FindGameObjectsWithTag("Player");
+        abilityOrb = GameObject.FindGameObjectsWithTag("Ability");
     }
 
     void Update()
@@ -38,6 +40,18 @@ public class PlayerController : MonoBehaviour
             {
                 closestPlayer = (player.transform.position - transform.position).magnitude; 
                 targetedPlayer = player.transform;
+            }
+        }
+
+        foreach (GameObject orb in abilityOrb)
+        {
+            if (orb == null) continue;
+            float dist = (orb.transform.position - transform.position).magnitude;
+
+            if (dist < closestPlayer)
+            {
+                closestPlayer = dist;
+                targetedPlayer = orb.transform;
             }
         }
     }

@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public static bool hit;
     public GameObject[] players;
     public GameObject[] abilityOrb;
+    public GameObject abilityIcon;
 
     void Start()
     {
@@ -87,6 +88,13 @@ public class PlayerController : MonoBehaviour
             Vector2 direction = (transform.position - collision.transform.position).normalized;
             rigidBody.linearVelocity = Vector2.zero;
             rigidBody.AddForce(direction * knockback, ForceMode2D.Impulse);
+        }
+
+        else if (collision.gameObject.CompareTag("Ability"))
+        {
+            Destroy(collision.gameObject);
+            abilityIcon.SetActive(true);
+            abilityOrb = GameObject.FindGameObjectsWithTag("Ability");
         }
     }
 }

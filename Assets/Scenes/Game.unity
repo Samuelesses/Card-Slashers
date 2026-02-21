@@ -194,6 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b91bda8f3922c1848b835d0fd8cb02ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardReader
+  hatListLength: 0
+  playersIndex: 0
 --- !u!1 &444658424
 GameObject:
   m_ObjectHideFlags: 0
@@ -3629,6 +3631,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6011789738666419824, guid: 9034118db292df440944ab9b16c4a5ad, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6011789738666419824, guid: 9034118db292df440944ab9b16c4a5ad, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -617282251
+      objectReference: {fileID: 0}
     - target: {fileID: 8667504520894272077, guid: 9034118db292df440944ab9b16c4a5ad, type: 3}
       propertyPath: m_Name
       value: Ability
@@ -3652,4 +3662,4 @@ SceneRoots:
   - {fileID: 941043080}
   - {fileID: 1172366862}
   - {fileID: 558501470}
-  - {fileID: 1750779401}
+  - {fileID: 7893412757745541614}

@@ -3,40 +3,40 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header ("---- Cosmetic Variables ----")]
     [SerializeField] GameObject[] hats;
     public int hatIndex;
+
+    [Header ("---- Combat Variables ----")]
+    public Rigidbody2D rigidBody;
     private Transform targetedPlayer;
     private float closestPlayer = 100f;
-    public List<Transform> players = new List<Transform>();
+    public GameObject[] players;
 
     void Start()
     {
         hatIndex = Random.Range(0, hats.Length);
         hats[hatIndex].SetActive(true);
-        foreach (Transform child in transform.parent)
-        {
-            if (child.CompareTag("Player") && child != transform)
-            {
-                players.Add(child);
-            }
-        }
+
+        players = GameObject.FindGameObjectsWithTag("Player");
     }
 
     void Update()
     {
-       foreach (Transform player in players)
+        
+        foreach (GameObject player in players)
         {
-            if ((player.position - transform.position).magnitude < closestPlayer)
+            if (player.transform == transform) continue;
+
+            if ((player.transform.position - transform.position).magnitude <= closestPlayer)
             {
-                targetedPlayer = player;
+                targetedPlayer = player.transform;
             }
         }
     }
 
-    //yo
-
     void FixedUpdate()
     {
-        transform.position = Vector2.MoveTowards(transform.position, targetedPlayer.position, 100f);
+        
     }
 }

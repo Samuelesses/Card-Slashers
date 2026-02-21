@@ -68,9 +68,6 @@ public class PlayerController : MonoBehaviour
         if (targetedPlayer)
         {
             Vector2 direction = (targetedPlayer.position - transform.position).normalized;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            rigidBody.rotation = angle;
-
             rigidBody.linearVelocity = direction * speed;
         
         }

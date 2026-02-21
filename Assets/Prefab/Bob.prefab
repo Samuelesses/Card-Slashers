@@ -158,10 +158,11 @@ MonoBehaviour:
   hats: []
   hatIndex: 0
   rigidBody: {fileID: 3416700874454996705}
-  speed: 1
-  knockback: 8
+  speed: 1.8
+  knockback: 20
   knockbackDuration: 0
   players: []
+  abilityOrb: []
 --- !u!50 &3416700874454996705
 Rigidbody2D:
   serializedVersion: 5

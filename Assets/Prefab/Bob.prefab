@@ -214,8 +214,8 @@ GameObject:
   m_Component:
   - component: {fileID: 32706067958140789}
   - component: {fileID: 2594662249375668181}
-  - component: {fileID: 3308146345780834614}
   - component: {fileID: 6323303387278688826}
+  - component: {fileID: 4291016615738177505}
   m_Layer: 0
   m_Name: renderer
   m_TagString: Untagged
@@ -299,28 +299,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!95 &3308146345780834614
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3065414686326995911}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4e726f3d38cbd490ebc0a7859ffbfbe5, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &6323303387278688826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,6 +312,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   player: {fileID: 9037212156995304705}
+--- !u!95 &4291016615738177505
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3065414686326995911}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5d65a821eaea64a87a97148afb8abb95, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3696362958498858028
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,7 +614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6344718996910038755}
   - component: {fileID: 5171281468878822732}
-  - component: {fileID: 108934800714932571}
+  - component: {fileID: 7108510451879799047}
   m_Layer: 0
   m_Name: shirt033_0
   m_TagString: Untagged
@@ -696,7 +696,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &108934800714932571
+--- !u!114 &7108510451879799047
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -705,7 +705,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8241005966256700624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67cf63e926e59443494d9ba5339a8996, type: 3}
+  m_Script: {fileID: 11500000, guid: 56ce094f2559344fa86a2cec1ec888b8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::shirtScript
   sr: {fileID: 5171281468878822732}

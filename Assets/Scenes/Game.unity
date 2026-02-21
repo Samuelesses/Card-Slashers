@@ -677,7 +677,7 @@ MonoBehaviour:
   - {fileID: 697403344}
   - {fileID: 232257564}
   - {fileID: 1566113399}
-  openSpawnPoints: 0100000002000000030000000400000006000000
+  openSpawnPoints: 0100000002000000030000000400000005000000
 --- !u!1 &1127045529
 GameObject:
   m_ObjectHideFlags: 0

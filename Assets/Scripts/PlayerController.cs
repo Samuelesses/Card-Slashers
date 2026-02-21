@@ -70,9 +70,6 @@ public class PlayerController : MonoBehaviour
         if (targetedPlayer)
         {
             Vector2 direction = (targetedPlayer.position - transform.position).normalized;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            rigidBody.rotation = angle;
-
             rigidBody.linearVelocity = direction * speed;
         
         }
@@ -92,13 +89,6 @@ public class PlayerController : MonoBehaviour
             rigidBody.AddForce(direction * knockback, ForceMode2D.Impulse);
             srAni.SetTrigger("hit");
             Instantiate(hitParticle, transform.position, transform.rotation);
-        }
-
-        else if (collision.gameObject.CompareTag("Ability"))
-        {
-            Destroy(collision.gameObject);
-            abilityIcon.SetActive(true);
-            abilityOrb = GameObject.FindGameObjectsWithTag("Ability");
         }
     }
 }

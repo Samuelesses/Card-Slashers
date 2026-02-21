@@ -5,6 +5,8 @@ public class PlayerController : MonoBehaviour
     [Header ("---- Cosmetic Variables ----")]
     public GameObject[] hats;
     public int hatIndex;
+    [SerializeField] Animator srAni;
+    [SerializeField] GameObject hitParticle;
 
     [Header ("---- Combat Variables ----")]
     public Rigidbody2D rigidBody;
@@ -20,8 +22,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        //hatIndex = Random.Range(0, hats.Length);
-        //hats[hatIndex].SetActive(true);
+        hatIndex = Random.Range(0, hats.Length);
+        hats[hatIndex].SetActive(true);
 
         players = GameObject.FindGameObjectsWithTag("Player");
         abilityOrb = GameObject.FindGameObjectsWithTag("Ability");
@@ -85,6 +87,8 @@ public class PlayerController : MonoBehaviour
             Vector2 direction = (transform.position - collision.transform.position).normalized;
             rigidBody.linearVelocity = Vector2.zero;
             rigidBody.AddForce(direction * knockback, ForceMode2D.Impulse);
+            srAni.SetTrigger("hit");
+            Instantiate(hitParticle, transform.position, transform.rotation);
         }
     }
 }

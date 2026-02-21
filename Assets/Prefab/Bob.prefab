@@ -218,7 +218,6 @@ Transform:
   m_Children:
   - {fileID: 5088257380677673661}
   - {fileID: 32706067958140789}
-  - {fileID: 6588000632868563483}
   - {fileID: 3959014260453459095}
   - {fileID: 6024051698496540696}
   - {fileID: 5549222800420921045}
@@ -362,7 +361,7 @@ MonoBehaviour:
   knockbackDuration: 0
   players: []
   abilityOrb: []
-  abilityIcon: {fileID: 0}
+  abilityIcon: {fileID: 5584085429067033200}
 --- !u!50 &3416700874454996705
 Rigidbody2D:
   serializedVersion: 5
@@ -622,6 +621,7 @@ Transform:
   m_Children:
   - {fileID: 4845708382805271946}
   - {fileID: 6344718996910038755}
+  - {fileID: 6588000632868563483}
   m_Father: {fileID: 9037212156995304705}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2594662249375668181
@@ -6430,11 +6430,11 @@ Transform:
   m_GameObject: {fileID: 5584085429067033200}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 0.89, z: 0}
-  m_LocalScale: {x: 0.55452, y: 0.55452, z: 0.55452}
+  m_LocalPosition: {x: 0.00210072, y: 0.129, z: 0}
+  m_LocalScale: {x: 0.0928413, y: 0.0928413, z: 0.0928413}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 9037212156995304705}
+  m_Father: {fileID: 32706067958140789}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &444602416837827349
 SpriteRenderer:
@@ -6483,10 +6483,10 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -617282251
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 36
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3797425054704282573, guid: 01785430ceb80d04e9afbdd3a36feec9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.42745098}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.79607844}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

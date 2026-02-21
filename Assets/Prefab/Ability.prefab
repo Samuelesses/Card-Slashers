@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1331195427
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3797425054704282573, guid: 01785430ceb80d04e9afbdd3a36feec9, type: 3}
@@ -105,6 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c74465df49d7f34f9e9db768ca6ac3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  hasAbility: 0
+  abilityManager: {fileID: 5942829567543687501, guid: d4ae1445aa7d82e4799de57d79897e57, type: 3}
 --- !u!58 &8741553718292773622
 CircleCollider2D:
   m_ObjectHideFlags: 0

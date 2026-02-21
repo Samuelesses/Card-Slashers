@@ -360,7 +360,7 @@ MonoBehaviour:
   knockbackDuration: 0
   players: []
   abilityOrb: []
-  abilityIcon: {fileID: 0}
+  abilityIcon: {fileID: 3272761761722712625}
 --- !u!50 &3416700874454996705
 Rigidbody2D:
   serializedVersion: 5
@@ -528,6 +528,7 @@ Transform:
   m_Children:
   - {fileID: 4845708382805271946}
   - {fileID: 6344718996910038755}
+  - {fileID: 2249383429128097526}
   m_Father: {fileID: 9037212156995304705}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2594662249375668181

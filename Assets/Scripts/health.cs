@@ -8,6 +8,7 @@ public class health : MonoBehaviour
     public int maxDamage = 5;
     private TextMeshProUGUI hpText;
     PlayerController playerController;
+    [SerializeField] GameObject damDisplay;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,6 +27,10 @@ public class health : MonoBehaviour
         if (totalHp <= 0)
         {
             Destroy(gameObject);
+        }
+        else
+        {
+            Instantiate(damDisplay, transform.position, transform.rotation).GetComponent<damNumScript>().updateText("-"+damage);
         }
     }
 }

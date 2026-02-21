@@ -16,7 +16,7 @@ public class AbilityOrb : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             PlayerController pc = collision.GetComponent<PlayerController>();
-            pc.ActivateAbilityIcon();
+            pc.abilityIcon.SetActive(true);
             Destroy(gameObject);
         }
     }

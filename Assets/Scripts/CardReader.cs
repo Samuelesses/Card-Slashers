@@ -1,20 +1,29 @@
-using System.Collections.Generic;
 using UnityEngine;
-
+using System.Collections.Generic;
 public class CardReader : MonoBehaviour
 {
     private string currentCardData;
     public Dictionary<string, CardPlayerData> cardDatabase = new Dictionary<string, CardPlayerData>();
+    public int hatListLength;
+    public CardPlayerData[] players = new CardPlayerData[4];
+    public int playersIndex = 0;
 
     public class CardPlayerData
     {
         public string name;
         public string hexColor;
+        public float _color1;
+        public float _color2;
+        public float _color3;
+        public int _hatIndex;
 
-        public CardPlayerData(string _name, string _hexColor)
+        public CardPlayerData(string _name, float _color1, float _color2, float _color3, int _hatIndex)
         {
             name = _name;
-            hexColor = _hexColor;
+            _color1 = _color1;
+            _color2 = _color2;
+            _color3 = _color3;
+            _hatIndex = _hatIndex;
         }
     }
 
@@ -41,12 +50,14 @@ public class CardReader : MonoBehaviour
         {
             Debug.Log("CARD EXISTS IN DATABASE");
         }
-        else
+        else if(playersIndex<players.Length)
         {
             Debug.Log("CARD NOT FOUND IN DATABASE. ADDING");
-
-            cardDatabase.Add(currentCardData, new CardPlayerData("NAME HERE", "#000000"));
-            Debug.Log(cardDatabase[currentCardData].name + cardDatabase[currentCardData].hexColor);
+            CardPlayerData temp = new CardPlayerData("NAME HERE", Random.Range(0f,1f), Random.Range(0f,1f), Random.Range(0f,1f), Random.Range(0, hatListLength));
+            cardDatabase.Add(currentCardData, temp);
+            players[playersIndex] = temp;
+            playersIndex++;
+            Debug.Log(cardDatabase);
         }
 
         currentCardData = "";

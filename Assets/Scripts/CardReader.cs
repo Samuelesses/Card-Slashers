@@ -3,8 +3,20 @@ using UnityEngine;
 
 public class CardReader : MonoBehaviour
 {
-    private string cardData;
-    public Dictionary<string, string> cardDatabase = new Dictionary<string, string>();
+    private string currentCardData;
+    public Dictionary<string, CardPlayerData> cardDatabase = new Dictionary<string, CardPlayerData>();
+
+    public class CardPlayerData
+    {
+        public string name;
+        public string hexColor;
+
+        public CardPlayerData(string _name, string _hexColor)
+        {
+            name = _name;
+            hexColor = _hexColor;
+        }
+    }
 
     void Update()
     {
@@ -12,15 +24,31 @@ public class CardReader : MonoBehaviour
         {
             if (c == '\n' || c == '\r')
             {
-                Debug.Log("CARD SCANNED");
-                if (!cardDatabase.ContainsKey(cardData)) cardDatabase.Add(cardData, "N/A");
-                Debug.Log(cardData);
-                cardData = "";
+                HandleCard();
             }
             else
             {
-                cardData += c;
+                currentCardData += c;
             }
         }
+    }
+
+    private void HandleCard()
+    {
+        Debug.Log("CARD SCANNED" + currentCardData);
+        
+        if (cardDatabase.ContainsKey(currentCardData))
+        {
+            Debug.Log("CARD EXISTS IN DATABASE");
+        }
+        else
+        {
+            Debug.Log("CARD NOT FOUND IN DATABASE. ADDING");
+
+            cardDatabase.Add(currentCardData, new CardPlayerData("NAME HERE", "#000000"));
+            Debug.Log(cardDatabase[currentCardData].name + cardDatabase[currentCardData].hexColor);
+        }
+
+        currentCardData = "";
     }
 }

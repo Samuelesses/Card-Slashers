@@ -57,7 +57,7 @@ public class CardReader : MonoBehaviour
         Debug.Log("CARD SCANNED" + currentCardData);
         Scene currentScene = SceneManager.GetActiveScene();
         
-        if (cardDatabase.ContainsKey(currentCardData) && currentScene.name == "Main Menu")
+        if (cardDatabase.ContainsKey(currentCardData) && currentScene.name == "Main Menu" && players.Length > 1)
         {
             Debug.Log("CARD EXISTS IN DATABASE. LOADING GAME SCENE");
             transAni.SetTrigger("go");

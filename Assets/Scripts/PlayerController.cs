@@ -72,6 +72,9 @@ public class PlayerController : MonoBehaviour
         closestPlayer = 100f;
         targetedPlayer = null;
 
+        players    = GameObject.FindGameObjectsWithTag("Player");
+        abilityOrb = GameObject.FindGameObjectsWithTag("Ability");
+
         foreach (GameObject player in players)
         {
             if (player == null) continue;

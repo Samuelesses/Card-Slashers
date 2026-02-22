@@ -23,6 +23,10 @@ public class health : MonoBehaviour
 
     public void takeDamage()
     {
+        if (isShielded)
+        {
+            return;
+        }
         int damage = Random.Range(minDamage, maxDamage);
         totalHp -= damage;
         //hpText.text = totalHp.ToString();

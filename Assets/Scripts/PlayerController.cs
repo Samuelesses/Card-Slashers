@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
             rigidBody.AddForce(direction * knockback, ForceMode2D.Impulse);
             srAni.SetTrigger("hit");
             Instantiate(hitParticle, transform.position, transform.rotation);
-            cameraScript.shake(0.1f, 0.04f);
+            //cameraScript.shake(0.1f, 0.04f);
         }
     }
 }

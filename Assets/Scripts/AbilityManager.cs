@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class AbilityManager : MonoBehaviour
 {
-    public enum Ability { None, Speed, Knockback, Power, Shield }
+    public enum Ability { None, Speed, Power, Shield, Bomb }
     public Ability currentAbility = Ability.None;
+    public GameObject shieldEffect;
     private PlayerController pc;
     private health h;
     void Start()
@@ -37,23 +38,31 @@ public class AbilityManager : MonoBehaviour
             pc.speed *= 2f;
             Invoke("ResetStats", 4f);
         }
-        else if (currentAbility == Ability.Knockback)
-        {
-            pc.knockback *= 2f;
-            Invoke("ResetStats", 4f);
-        }
+        
         else if (currentAbility == Ability.Power)
         {
             h = GetComponent<health>();
-            h.minDamage *= 2;
+            h.minDamage *= 5;
             h.maxDamage *= 2;
             Invoke("ResetStats", 4f);
         }
         else if (currentAbility == Ability.Shield)
         {
             h = GetComponent<health>();
+            shieldEffect.SetActive(true);
             h.isShielded = true;
             Invoke("ResetStats", 4f);
+        }
+        else if (currentAbility == Ability.Bomb)
+        {
+            BoxCollider2D col = GetComponent<BoxCollider2D>();
+            if (col != null)
+                {
+                    col.size = new Vector2(3f, 3f); 
+                    pc.knockback = 0;
+                    Invoke("ResetBombCollider", 4f);
+                    Invoke("ResetStats", 4f);
+                }
         }
 
         currentAbility = Ability.None;
@@ -67,5 +76,12 @@ public class AbilityManager : MonoBehaviour
         h.minDamage = 1;
         h.maxDamage = 5;
         h.isShielded = false;
+        shieldEffect.SetActive(false);
+    }
+
+    void ResetBombCollider()
+    {
+        BoxCollider2D col = GetComponent<BoxCollider2D>();
+        col.size = new Vector2(0.5f, 0.5f);
     }
 }

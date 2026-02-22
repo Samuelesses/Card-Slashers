@@ -16,7 +16,7 @@ public class AbilitySpawner : MonoBehaviour
     public Canvas winScreen;
     public TextMeshProUGUI winnerText;
     
-    private bool gameEnded = false;
+    public bool gameEnded = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

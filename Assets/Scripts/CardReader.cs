@@ -12,7 +12,7 @@ public class CardReader : MonoBehaviour
     public GameObject[] realPlayers;
     public int playersIndex = 0;
 
-    private string[] randomNames;
+    public string[] randomNames;
 
     [SerializeField] Animator transAni;
     [SerializeField] PlayerManager pm;

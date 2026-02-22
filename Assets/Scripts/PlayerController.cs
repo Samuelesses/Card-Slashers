@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
     public GameObject[] abilityOrb;
     public GameObject abilityIcon;
 
+    public int myAttackMin = 1;
+    public int myAttackMax = 5;
+
     void Start()
     {
         cameraScript = GameObject.Find("Main Camera").GetComponent<CameraScript>();
@@ -82,7 +85,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             health enemyHealth = collision.gameObject.GetComponent<health>();
-            enemyHealth.takeDamage();
+            enemyHealth.takeDamage(myAttackMin, myAttackMax);
             knockbackDuration = 0.5f;
             //Debug.Log("hit");
             hit = true;

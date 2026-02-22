@@ -42,8 +42,8 @@ public class AbilityManager : MonoBehaviour
         else if (currentAbility == Ability.Power)
         {
             h = GetComponent<health>();
-            h.minDamage *= 5;
-            h.maxDamage *= 2;
+            pc.myAttackMin *= 5;
+            pc.myAttackMax *= 2;
             Invoke("ResetStats", 4f);
         }
         else if (currentAbility == Ability.Shield)
@@ -59,8 +59,8 @@ public class AbilityManager : MonoBehaviour
             if (col != null)
                 {
                     col.size = new Vector2(3f, 3f); 
-                    h.minDamage *= 5;
-                    h.maxDamage *= 5;
+                    pc.myAttackMin *= 5;
+                    pc.myAttackMax *= 5;
                     pc.knockback = 0;
                     Invoke("ResetBombCollider", 0.4f);
                     Invoke("ResetStats", 0.4f);
@@ -73,10 +73,10 @@ public class AbilityManager : MonoBehaviour
 
     void ResetStats()
     {
-        pc.speed = 1f;
-        pc.knockback = 5f;
-        h.minDamage = 1;
-        h.maxDamage = 5;
+        pc.speed = 2f;
+        pc.knockback = 20f;
+        pc.myAttackMin = 1;
+        pc.myAttackMax = 5;
         h.isShielded = false;
         shieldEffect.SetActive(false);
     }

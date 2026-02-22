@@ -358,7 +358,7 @@ MonoBehaviour:
   hitParticle: {fileID: 3829918418886504182}
   cameraScript: {fileID: 0}
   rigidBody: {fileID: 3416700874454996705}
-  speed: 1.8
+  speed: 2
   knockback: 20
   knockbackDuration: 0
   players: []

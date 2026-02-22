@@ -10,6 +10,9 @@ public class health : MonoBehaviour
     PlayerController playerController;
     [SerializeField] GameObject damDisplay;
 
+    public bool isShielded = false;
+    //public GameObject shieldEffect; --- add this later
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,7 +26,7 @@ public class health : MonoBehaviour
         int damage = Random.Range(minDamage, maxDamage);
         totalHp -= damage;
         //hpText.text = totalHp.ToString();
-        Debug.Log(gameObject.name + " Health: " + totalHp);
+        //Debug.Log(gameObject.name + " Health: " + totalHp);
         if (totalHp <= 0)
         {
             Destroy(gameObject);

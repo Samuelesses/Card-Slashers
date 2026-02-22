@@ -3735,12 +3735,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c6b786d9f6e8cf49820dc116255bd0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilitySpawner
-  orbPrefab: {fileID: 0}
+  orbPrefab: {fileID: 8667504520894272077, guid: 9034118db292df440944ab9b16c4a5ad, type: 3}
   spawnRate: 4
-  minX: -9
-  maxX: 9
-  minY: -7
-  maxY: 7
+  minX: -8
+  maxX: 8
+  minY: -5
+  maxY: 5
 --- !u!4 &1495310407
 Transform:
   m_ObjectHideFlags: 0

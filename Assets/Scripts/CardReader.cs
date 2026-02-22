@@ -11,6 +11,7 @@ public class CardReader : MonoBehaviour
     public CardPlayerData[] players = new CardPlayerData[4];
     public GameObject[] realPlayers;
     public int playersIndex = 0;
+    public List<string> usedNames;
 
     private string[] randomNames;
 
@@ -116,6 +117,13 @@ public class CardReader : MonoBehaviour
             }
             int tempIndex = cardDatabase.Count;
             string pickedName = randomNames[Random.Range(0, randomNames.Length)];
+
+            while (usedNames.Contains(pickedName))
+            {
+                pickedName = randomNames[Random.Range(0, randomNames.Length)];
+            }
+            
+            usedNames.Add(pickedName);
             cardDatabase.Add(tempIndex, new CardPlayerData(pickedName, currentCardData, Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0, hatListLength)));
             realPlayers[tempIndex].GetComponent<menuPlayerScript>().updatePlayer(cardDatabase[tempIndex].name,cardDatabase[tempIndex].color1,cardDatabase[tempIndex].color2,cardDatabase[tempIndex].color3,cardDatabase[tempIndex].hatIndex);
             currentCardData = "";

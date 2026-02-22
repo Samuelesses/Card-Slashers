@@ -59,9 +59,11 @@ public class AbilityManager : MonoBehaviour
             if (col != null)
                 {
                     col.size = new Vector2(3f, 3f); 
+                    h.minDamage *= 5;
+                    h.maxDamage *= 5;
                     pc.knockback = 0;
-                    Invoke("ResetBombCollider", 4f);
-                    Invoke("ResetStats", 4f);
+                    Invoke("ResetBombCollider", 0.4f);
+                    Invoke("ResetStats", 0.4f);
                 }
         }
 

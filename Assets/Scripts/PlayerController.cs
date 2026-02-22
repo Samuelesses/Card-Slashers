@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public int index;
     [Header ("---- Cosmetic Variables ----")]
     public GameObject[] hats;
     public int hatIndex;
@@ -20,16 +21,17 @@ public class PlayerController : MonoBehaviour
     public GameObject[] players;
     public GameObject[] abilityOrb;
     public GameObject abilityIcon;
-
     public int myAttackMin = 1;
     public int myAttackMax = 5;
+    [Header ("---- Combat Variables ----")]
+    public CardReader cr;
 
     void Start()
     {
         cameraScript = GameObject.Find("Main Camera").GetComponent<CameraScript>();
-        hatIndex = Random.Range(0, hats.Length);
+        //hatIndex = Random.Range(0, hats.Length);
+        //hatIndex = cr.cardDatabase.;
         hats[hatIndex].SetActive(true);
-
         players = GameObject.FindGameObjectsWithTag("Player");
         abilityOrb = GameObject.FindGameObjectsWithTag("Ability");
     }

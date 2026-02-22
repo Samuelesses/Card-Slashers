@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
-using Unity.VisualScripting;
+using System.IO;
+using UnityEditor;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     [Header ("---- Cosmetic Variables ----")]
     public GameObject[] hats;
     public int hatIndex2;
+    public string audioFilePath = "Assets/Audio/";
+    public AudioSource audioSource;
     [SerializeField] Animator srAni;
     [SerializeField] GameObject hitParticle;
     [SerializeField] CameraScript cameraScript;
@@ -43,6 +45,7 @@ public class PlayerController : MonoBehaviour
             cr = GameObject.Find("CardReader").GetComponent<CardReader>();
             cameraScript = GameObject.Find("Main Camera").GetComponent<CameraScript>();
             nameText.text = cr.cardDatabase[index].name;
+            audioFilePath += cr.cardDatabase[index].name;
             hatIndex2 = cr.cardDatabase[index].hatIndex;
             hats[hatIndex2].SetActive(true);
             shirtSr.color = new Color(cr.cardDatabase[index].color1, cr.cardDatabase[index].color2, cr.cardDatabase[index].color3, 1);
@@ -55,6 +58,7 @@ public class PlayerController : MonoBehaviour
         }
         players = GameObject.FindGameObjectsWithTag("Player");
         abilityOrb = GameObject.FindGameObjectsWithTag("Ability");
+        audioSource = transform.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -110,6 +114,7 @@ public class PlayerController : MonoBehaviour
         {
             health enemyHealth = collision.gameObject.GetComponent<health>();
             enemyHealth.takeDamage(myAttackMin,myAttackMax);
+            PlaySound("Attack");
             knockbackDuration = 0.5f;
             //Debug.Log("hit");
             hit = true;
@@ -120,6 +125,12 @@ public class PlayerController : MonoBehaviour
             Instantiate(hitParticle, transform.position, transform.rotation);
             //cameraScript.shake(0.1f, 0.04f);
         }
+    }
+
+    public void PlaySound(string voiceType)
+    {
+        AudioClip[] clips = Resources.LoadAll<AudioClip>(audioFilePath + voiceType);
+        audioSource.PlayOneShot(clips[Random.Range(0, clips.Length)]);
     }
 }
 

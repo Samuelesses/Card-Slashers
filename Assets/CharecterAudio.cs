@@ -21,6 +21,6 @@ public class CharacterAudio : MonoBehaviour
             return;
 
         AudioClip randomClip = clips[Random.Range(0, clips.Length)];
-        audioSource.PlayOneShot(randomClip);
+        //audioSource.PlayOneShot(randomClip);
     }
 }

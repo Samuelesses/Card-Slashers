@@ -340,6 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cb46fb56942fea4fb68d91e140db034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  index: 0
   hats:
   - {fileID: 3041112705210514653}
   - {fileID: 183628929351677009}
@@ -352,10 +353,12 @@ MonoBehaviour:
   - {fileID: 5103426355867793386}
   - {fileID: 4835899819773752313}
   - {fileID: 3365433141094034982}
-  hatIndex: 0
+  hatIndex2: 0
   srAni: {fileID: 4291016615738177505}
   hitParticle: {fileID: 3829918418886504182}
   cameraScript: {fileID: 0}
+  sr: {fileID: 0}
+  shirtSr: {fileID: 5171281468878822732}
   rigidBody: {fileID: 3416700874454996705}
   speed: 1.8
   knockback: 20
@@ -363,6 +366,7 @@ MonoBehaviour:
   players: []
   abilityOrb: []
   abilityIcon: {fileID: 5584085429067033200}
+  cr: {fileID: 0}
 --- !u!50 &3416700874454996705
 Rigidbody2D:
   serializedVersion: 5

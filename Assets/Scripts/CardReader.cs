@@ -13,7 +13,7 @@ public class CardReader : MonoBehaviour
     public int playersIndex = 0;
     public List<string> usedNames;
 
-    private string[] randomNames;
+    public string[] randomNames;
 
     [SerializeField] Animator transAni;
     [SerializeField] PlayerManager pm;

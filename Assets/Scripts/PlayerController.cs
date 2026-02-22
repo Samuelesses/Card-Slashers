@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [Header ("---- Cosmetic Variables ----")]
     public GameObject[] hats;
     public int hatIndex2;
+    public string audioFilePath = "Assets/Audio/";
     [SerializeField] Animator srAni;
     [SerializeField] GameObject hitParticle;
     [SerializeField] CameraScript cameraScript;
@@ -34,6 +35,11 @@ public class PlayerController : MonoBehaviour
         {
             cr = GameObject.Find("CardReader").GetComponent<CardReader>();
             cameraScript = GameObject.Find("Main Camera").GetComponent<CameraScript>();
+<<<<<<< Updated upstream
+=======
+            nameText.text = cr.cardDatabase[index].name;
+            audioFilePath += cr.cardDatabase[index].name;
+>>>>>>> Stashed changes
             hatIndex2 = cr.cardDatabase[index].hatIndex;
             hats[hatIndex2].SetActive(true);
             shirtSr.color = new Color(cr.cardDatabase[index].color1, cr.cardDatabase[index].color2, cr.cardDatabase[index].color3, 1);

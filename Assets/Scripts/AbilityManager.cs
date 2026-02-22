@@ -9,6 +9,8 @@ public class AbilityManager : MonoBehaviour
     public GameObject shieldEffect;
     private PlayerController pc;
     private health h;
+
+    public GameObject explosionEffect;
     void Start()
     {
         pc = GetComponent<PlayerController>();
@@ -29,7 +31,7 @@ public class AbilityManager : MonoBehaviour
     public void GiveRandomAbility()
     {
         if (currentAbility != Ability.None) return;
-        int temp = Random.Range(1, 5);
+        int temp = Random.Range(4, 5);
         currentAbility = (Ability)temp;
         sr.sprite = sprites[temp];
         Debug.Log(temp);
@@ -64,6 +66,7 @@ public class AbilityManager : MonoBehaviour
             if (col != null)
                 {
                     col.size = new Vector2(3f, 3f); 
+                    Instantiate(explosionEffect, transform.position, transform.rotation);
                     pc.myAttackMin *= 5;
                     pc.myAttackMax *= 5;
                     pc.knockback = 0;

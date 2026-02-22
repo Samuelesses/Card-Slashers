@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
             health enemyHealth = collision.gameObject.GetComponent<health>();
             enemyHealth.takeDamage(myAttackMin,myAttackMax);
             knockbackDuration = 0.5f;
-            Debug.Log("hit");
+            //Debug.Log("hit");
             hit = true;
             Vector2 direction = (transform.position - collision.transform.position).normalized;
             rigidBody.linearVelocity = Vector2.zero;

@@ -3,6 +3,8 @@ using UnityEngine;
 public class AbilityManager : MonoBehaviour
 {
     public enum Ability { None, Speed, Power, Shield, Bomb }
+    public Sprite[] sprites;
+    [SerializeField] SpriteRenderer sr;
     public Ability currentAbility = Ability.None;
     public GameObject shieldEffect;
     private PlayerController pc;
@@ -27,7 +29,10 @@ public class AbilityManager : MonoBehaviour
     public void GiveRandomAbility()
     {
         if (currentAbility != Ability.None) return;
-        currentAbility = (Ability)Random.Range(1, 5);
+        int temp = Random.Range(1, 5);
+        currentAbility = (Ability)temp;
+        sr.sprite = sprites[temp];
+        Debug.Log(temp);
         Debug.Log(currentAbility);
     }
 

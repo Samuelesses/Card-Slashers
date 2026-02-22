@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 59db379c6339044beadac26d0e7c6b0b
+guid: 6e9c97c77a26946edabc1c93751a8615
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7612757995567860236
-    second: powerups9_0
+      213: -1907707884217835192
+    second: powerups9 1_0
   - first:
-      213: 4411403975884703075
-    second: powerups9_1
+      213: 6278803577734272602
+    second: powerups9 1_1
   - first:
-      213: -4617992933839725979
-    second: powerups9_2
+      213: -6421847305467344270
+    second: powerups9 1_2
+  - first:
+      213: -4242689486943234697
+    second: powerups9 1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,7 +109,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: powerups9_0
+      name: powerups9 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c0a46d61013f5a960800000000000000
-      internalID: 7612757995567860236
+      spriteID: 841ebf969c57685e0800000000000000
+      internalID: -1907707884217835192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: powerups9_1
+      name: powerups9 1_1
       rect:
         serializedVersion: 2
         x: 18
@@ -143,14 +146,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3658a5f1b84783d30800000000000000
-      internalID: 4411403975884703075
+      spriteID: a569d41669ac22750800000000000000
+      internalID: 6278803577734272602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: powerups9_2
+      name: powerups9 1_2
       rect:
         serializedVersion: 2
         x: 32
@@ -165,8 +168,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 56a1833d4e799efb0800000000000000
-      internalID: -4617992933839725979
+      spriteID: 27ac1db66e301e6a0800000000000000
+      internalID: -6421847305467344270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: powerups9 1_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 775d67ee360fe15c0800000000000000
+      internalID: -4242689486943234697
       vertices: []
       indices: 
       edges: []
@@ -185,9 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      powerups9_0: 7612757995567860236
-      powerups9_1: 4411403975884703075
-      powerups9_2: -4617992933839725979
+      powerups9 1_0: -1907707884217835192
+      powerups9 1_1: 6278803577734272602
+      powerups9 1_2: -6421847305467344270
+      powerups9 1_3: -4242689486943234697
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

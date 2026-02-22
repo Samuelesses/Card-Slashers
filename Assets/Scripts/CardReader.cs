@@ -52,6 +52,7 @@ public class CardReader : MonoBehaviour
                 currentCardData += c;
             }
         }
+        Debug.Log(SceneManager.GetActiveScene());
     }
 
     private void HandleCard()
@@ -67,7 +68,6 @@ public class CardReader : MonoBehaviour
                 if (player.Value.cardId == currentCardData)
                 {
                     transAni.SetTrigger("go");
-                    
                     return;
                 }
             }
@@ -78,13 +78,14 @@ public class CardReader : MonoBehaviour
         }
         else
         {
-            pm = GameObject.Find("Players");
-            KeyValuePair<int, CardPlayerData> tempPlayer;
+            Debug.Log("a");
+            pm = GameObject.Find("Players").GetComponent<PlayerManager>();
             for (int x=0; x<cardDatabase.Count; x++)
             {
-                if (player.Value.cardId == currentCardData)
+                if (cardDatabase[x].cardId == currentCardData)
                 {
-                    pm.abilityPlayer(tempPlayer);
+                    Debug.Log("a");
+                    pm.abilityPlayer(x);
                 }
             }
         }

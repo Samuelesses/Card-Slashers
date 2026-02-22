@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] SpriteRenderer shirtSr;
 
     [Header ("---- Combat Variables ----")]
+    public bool hasAbility = false;
+    public GameObject abilityObj;
     public Rigidbody2D rigidBody;
     private Transform targetedPlayer;
     private float closestPlayer = 100f;

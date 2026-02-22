@@ -347,7 +347,7 @@ MonoBehaviour:
   - {fileID: 3041112705210514653}
   - {fileID: 183628929351677009}
   - {fileID: 3737695486669754881}
-  - {fileID: 0}
+  - {fileID: 4836138359820774309}
   - {fileID: 5974181224728700622}
   - {fileID: 8699977931164975217}
   - {fileID: 1124422431765329736}
@@ -361,6 +361,8 @@ MonoBehaviour:
   cameraScript: {fileID: 0}
   sr: {fileID: 444602416837827349}
   shirtSr: {fileID: 5171281468878822732}
+  hasAbility: 0
+  abilityObj: {fileID: 0}
   rigidBody: {fileID: 3416700874454996705}
   speed: 1.8
   knockback: 20
@@ -418,6 +420,7 @@ MonoBehaviour:
   - {fileID: -4242689486943234697, guid: 6e9c97c77a26946edabc1c93751a8615, type: 3}
   - {fileID: -4242689486943234697, guid: 6e9c97c77a26946edabc1c93751a8615, type: 3}
   sr: {fileID: 444602416837827349}
+  player: {fileID: 1546356619691786279}
   currentAbility: 0
   shieldEffect: {fileID: 6828911611497857110}
   explosionEffect: {fileID: 7302169558414630392}

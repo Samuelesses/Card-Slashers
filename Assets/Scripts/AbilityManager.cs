@@ -5,6 +5,7 @@ public class AbilityManager : MonoBehaviour
     public enum Ability { None, Speed, Power, Shield, Bomb }
     public Sprite[] sprites;
     [SerializeField] SpriteRenderer sr;
+    [SerializeField] GameObject player;
     public Ability currentAbility = Ability.None;
     public GameObject shieldEffect;
     private PlayerController pc;
@@ -24,7 +25,7 @@ public class AbilityManager : MonoBehaviour
         {
             Debug.Log("Using: " + currentAbility);
             
-            UseAbility();
+            //UseAbility();
         }
     }
 
@@ -34,11 +35,12 @@ public class AbilityManager : MonoBehaviour
         int temp = Random.Range(4, 5);
         currentAbility = (Ability)temp;
         sr.sprite = sprites[temp];
+        player.GetComponent<PlayerController>().hasAbility = false;
         Debug.Log(temp);
         Debug.Log(currentAbility);
     }
 
-    void UseAbility()
+    public void UseAbility()
     {
         if (currentAbility == Ability.Speed)
         {

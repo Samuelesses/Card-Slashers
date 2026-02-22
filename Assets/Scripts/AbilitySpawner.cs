@@ -15,6 +15,8 @@ public class AbilitySpawner : MonoBehaviour
 
     public Canvas winScreen;
     public TextMeshProUGUI winnerText;
+    
+    private bool gameEnded = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,15 +27,18 @@ public class AbilitySpawner : MonoBehaviour
 
     void Update()
     {
+        if (gameEnded) return; // Don't check for winners if game already ended
+        
         GameObject[] remainingPlayers = GameObject.FindGameObjectsWithTag("Player");
         {
             if (remainingPlayers.Length <= 1)
             {
-                
+                gameEnded = true; // Set flag to prevent repeated calls
                 winScreen.gameObject.SetActive(true);
                 if (remainingPlayers.Length == 1)
                 {
                     winnerText.text = remainingPlayers[0].GetComponent<PlayerController>().nameText.text + " Wins!";
+                    AudioManager.Instance.Play("Victory", remainingPlayers[0].GetComponent<PlayerController>().nameText.text);
                     Time.timeScale = 0f;
                 }
                 else

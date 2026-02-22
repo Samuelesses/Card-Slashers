@@ -57,7 +57,14 @@ public class PlayerController : MonoBehaviour
         }
         players = GameObject.FindGameObjectsWithTag("Player");
         abilityOrb = GameObject.FindGameObjectsWithTag("Ability");
-        audioSource = transform.GetComponent<AudioSource>();
+        
+        // Ensure AudioSource is available and enabled
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+        audioSource.enabled = true;
     }
 
     void Update()
@@ -128,6 +135,13 @@ public class PlayerController : MonoBehaviour
 
     public void PlaySound(string voiceType)
     {
+        // Check if audio source is available and enabled
+        if (audioSource == null || !audioSource.enabled || !audioSource.gameObject.activeInHierarchy)
+        {
+            Debug.LogWarning($"AudioSource is disabled or null on {gameObject.name}");
+            return;
+        }
+        
         string characterName = "";
         
         if (!testing && cr != null)

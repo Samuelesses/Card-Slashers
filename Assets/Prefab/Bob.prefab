@@ -517,7 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbeea61bfbd207142aecb990dbf275e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  totalHp: 15
+  totalHp: 75
   isShielded: 0
   damDisplay: {fileID: 5246768937231377207}
 --- !u!82 &2227106770753203091

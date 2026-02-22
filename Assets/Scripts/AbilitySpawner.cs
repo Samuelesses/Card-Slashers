@@ -39,6 +39,7 @@ public class AbilitySpawner : MonoBehaviour
                 {
                     winnerText.text = remainingPlayers[0].GetComponent<PlayerController>().nameText.text + " Wins!";
                     AudioManager.Instance.Play("Victory", remainingPlayers[0].GetComponent<PlayerController>().nameText.text);
+                    Destroy(GameObject.Find("CardReader"));
                     Time.timeScale = 0f;
                 }
                 else

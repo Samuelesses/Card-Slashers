@@ -45,7 +45,6 @@ public class PlayerController : MonoBehaviour
             cr = GameObject.Find("CardReader").GetComponent<CardReader>();
             cameraScript = GameObject.Find("Main Camera").GetComponent<CameraScript>();
             nameText.text = cr.cardDatabase[index].name;
-            audioFilePath += cr.cardDatabase[index].name;
             hatIndex2 = cr.cardDatabase[index].hatIndex;
             hats[hatIndex2].SetActive(true);
             shirtSr.color = new Color(cr.cardDatabase[index].color1, cr.cardDatabase[index].color2, cr.cardDatabase[index].color3, 1);
@@ -129,8 +128,30 @@ public class PlayerController : MonoBehaviour
 
     public void PlaySound(string voiceType)
     {
-        AudioClip[] clips = Resources.LoadAll<AudioClip>(audioFilePath + voiceType);
-        audioSource.PlayOneShot(clips[Random.Range(0, clips.Length)]);
+        string characterName = "";
+        
+        if (!testing && cr != null)
+        {
+            characterName = cr.cardDatabase[index].name;
+        }
+        else
+        {
+            Debug.LogWarning("Cannot play sound: testing mode or no card reader found");
+            return;
+        }
+        
+        // Build path for Resources folder: Audio/CharacterName/VoiceType
+        string resourcesPath = "Audio/" + characterName + "/" + voiceType;
+        AudioClip[] clips = Resources.LoadAll<AudioClip>(resourcesPath);
+        
+        if (clips.Length == 0)
+        {
+            Debug.LogWarning($"No audio clips found at Resources path: {resourcesPath}. Make sure audio files are moved from Assets/Audio/ to Assets/Resources/Audio/");
+            return;
+        }
+        
+        AudioClip randomClip = clips[Random.Range(0, clips.Length)];
+        audioSource.PlayOneShot(randomClip);
     }
 }
 

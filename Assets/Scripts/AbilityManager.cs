@@ -69,8 +69,8 @@ public class AbilityManager : MonoBehaviour
                 {
                     col.size = new Vector2(3f, 3f); 
                     Instantiate(explosionEffect, transform.position, transform.rotation);
-                    pc.myAttackMin *= 5;
-                    pc.myAttackMax *= 5;
+                    pc.myAttackMin *= 3;
+                    pc.myAttackMax *= 3;
                     pc.knockback = 0;
                     Invoke("ResetBombCollider", 0.4f);
                     Invoke("ResetStats", 0.4f);

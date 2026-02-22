@@ -357,7 +357,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2128562908, guid: 9b82e2373c8424d9f898997487c02760, type: 3}
+  m_Sprite: {fileID: 426219978450935270, guid: 9ab72c5057085460bb6bb60b75b5ab13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -432,7 +432,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -994368961, guid: 9b82e2373c8424d9f898997487c02760, type: 3}
+  m_Sprite: {fileID: -122527672, guid: 9ab72c5057085460bb6bb60b75b5ab13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -683,7 +683,7 @@ GameObject:
   - component: {fileID: 110402737}
   - component: {fileID: 110402738}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: CardReader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -931,7 +931,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -994368961, guid: 9b82e2373c8424d9f898997487c02760, type: 3}
+  m_Sprite: {fileID: -122527672, guid: 9ab72c5057085460bb6bb60b75b5ab13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2764,6 +2764,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5477280487908817443, guid: a6631154a565c4080a17e75f8f9e05c1, type: 3}
+      propertyPath: m_text
+      value: Any Player Swipe Twice To Start
+      objectReference: {fileID: 0}
     - target: {fileID: 6422617355891663886, guid: a6631154a565c4080a17e75f8f9e05c1, type: 3}
       propertyPath: m_Name
       value: Play UI
@@ -3083,7 +3087,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2128562908, guid: 9b82e2373c8424d9f898997487c02760, type: 3}
+  m_Sprite: {fileID: 426219978450935270, guid: 9ab72c5057085460bb6bb60b75b5ab13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3760,7 +3764,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -994368961, guid: 9b82e2373c8424d9f898997487c02760, type: 3}
+  m_Sprite: {fileID: -122527672, guid: 9ab72c5057085460bb6bb60b75b5ab13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4060,7 +4064,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -994368961, guid: 9b82e2373c8424d9f898997487c02760, type: 3}
+  m_Sprite: {fileID: -122527672, guid: 9ab72c5057085460bb6bb60b75b5ab13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4539,7 +4543,7 @@ GameObject:
   - component: {fileID: 1604869968}
   - component: {fileID: 1604869967}
   m_Layer: 0
-  m_Name: springs Magnetic Pluggnb NCS Copyright Free Music
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4560,7 +4564,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.409
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5014,7 +5018,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2128562908, guid: 9b82e2373c8424d9f898997487c02760, type: 3}
+  m_Sprite: {fileID: 426219978450935270, guid: 9ab72c5057085460bb6bb60b75b5ab13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5089,7 +5093,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2128562908, guid: 9b82e2373c8424d9f898997487c02760, type: 3}
+  m_Sprite: {fileID: 426219978450935270, guid: 9ab72c5057085460bb6bb60b75b5ab13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -20,7 +20,7 @@ public class PlayerManager : MonoBehaviour
         {
             int spawnPoint = openSpawnPoints[Random.Range(0, openSpawnPoints.Count)];
 
-            Instantiate(playerPrefab, spawnPoints[spawnPoint].position, Quaternion.identity, transform);
+            Instantiate(playerPrefab, spawnPoints[spawnPoint].position, Quaternion.identity, transform).GetComponent<PlayerController>().index = i;
 
             openSpawnPoints.Remove(spawnPoint);
         }

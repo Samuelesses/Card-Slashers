@@ -364,6 +364,8 @@ MonoBehaviour:
   players: []
   abilityOrb: []
   abilityIcon: {fileID: 5584085429067033200}
+  myAttackMin: 1
+  myAttackMax: 5
 --- !u!50 &3416700874454996705
 Rigidbody2D:
   serializedVersion: 5
@@ -403,11 +405,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbeea61bfbd207142aecb990dbf275e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  totalHp: 75
-  minDamage: 1
-  maxDamage: 5
-  damDisplay: {fileID: 5246768937231377207}
+  totalHp: 30
   isShielded: 0
+  damDisplay: {fileID: 5246768937231377207}
 --- !u!114 &5942829567543687501
 MonoBehaviour:
   m_ObjectHideFlags: 0

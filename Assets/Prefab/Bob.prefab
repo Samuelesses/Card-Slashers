@@ -356,6 +356,7 @@ MonoBehaviour:
   hatIndex: 0
   srAni: {fileID: 4291016615738177505}
   hitParticle: {fileID: 3829918418886504182}
+  cameraScript: {fileID: 0}
   rigidBody: {fileID: 3416700874454996705}
   speed: 1.8
   knockback: 20
@@ -406,6 +407,7 @@ MonoBehaviour:
   minDamage: 1
   maxDamage: 5
   damDisplay: {fileID: 5246768937231377207}
+  isShielded: 0
 --- !u!114 &5942829567543687501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6189,7 +6191,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -994368961, guid: 9b82e2373c8424d9f898997487c02760, type: 3}
+  m_Sprite: {fileID: -122527672, guid: 9ab72c5057085460bb6bb60b75b5ab13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6818,7 +6820,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2128562908, guid: 9b82e2373c8424d9f898997487c02760, type: 3}
+  m_Sprite: {fileID: 426219978450935270, guid: 9ab72c5057085460bb6bb60b75b5ab13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

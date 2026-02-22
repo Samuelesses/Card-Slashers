@@ -403,7 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbeea61bfbd207142aecb990dbf275e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  totalHp: 25
+  totalHp: 75
   minDamage: 1
   maxDamage: 5
   damDisplay: {fileID: 5246768937231377207}
@@ -421,6 +421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   currentAbility: 0
+  shieldEffect: {fileID: 6956713263436048335}
 --- !u!1 &2645449895891540379
 GameObject:
   m_ObjectHideFlags: 0

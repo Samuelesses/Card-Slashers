@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UISwitch : MonoBehaviour
 {
@@ -9,8 +10,16 @@ public class UISwitch : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            Players.SetActive(true);
-            NoPlayers.SetActive(false);
+            if (Players.activeSelf)
+            {
+                // second press when panel already shown should start the game
+                SceneManager.LoadScene("Game");
+            }
+            else
+            {
+                Players.SetActive(true);
+                NoPlayers.SetActive(false);
+            }
         }
     }
 }
